@@ -1,0 +1,15 @@
+stages:
+  - test
+
+phpunit:
+  stage: test
+  image: php:8.2-cli
+  before_script:
+    - apt-get update && apt-get install -y git unzip libzip-dev
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    - yes '' | pecl install pcov && docker-php-ext-enable pcov
+    - composer install --no-interaction
+  script:
+    - vendor/bin/phpunit --coverage-text
+  rules:
+    - if: $CI_PIPELINE_SOURCE
