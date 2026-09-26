@@ -26,6 +26,8 @@ final class ScenarioInput
         public ?string $runbook = null,
         public ?string $cron = null,
         public ?bool $enabled = null,
+        /** @var list<array<string, mixed>>|null */
+        public ?array $httpChain = null,
     ) {
     }
 
@@ -48,6 +50,7 @@ final class ScenarioInput
             'runbook' => $this->runbook,
             'cron' => $this->cron,
             'enabled' => $this->enabled,
+            'httpChain' => $this->httpChain,
         ]);
     }
 }

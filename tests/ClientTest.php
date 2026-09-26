@@ -416,8 +416,10 @@ final class ClientTest extends TestCase
             runbook: 'r',
             cron: 'c',
             enabled: true,
+            httpChain: [['method' => 'GET', 'url' => 'https://x']],
         );
         self::assertArrayHasKey('name', $in->toArray());
+        self::assertArrayHasKey('httpChain', $in->toArray());
         self::assertSame(['a' => 1], omit_null(['a' => 1, 'b' => null]));
 
         $mw = \Pathly\MaintenanceWindow::fromArray([

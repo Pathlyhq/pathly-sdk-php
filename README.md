@@ -40,6 +40,16 @@ $scenario = $client->createScenario(new ScenarioInput(
     tags: ['prod', 'payment'],
 ));
 echo $scenario->id, PHP_EOL;
+
+$chain = $client->createScenario(new ScenarioInput(
+    name: 'Login then /me',
+    intervalSec: 300,
+    httpChain: [
+        ['method' => 'POST', 'url' => 'https://api.example.com/login', 'assertStatus' => 200],
+        ['method' => 'GET', 'url' => 'https://api.example.com/me', 'assertStatus' => 200],
+    ],
+));
+echo $chain->id, PHP_EOL;
 ```
 
 ## Why Pathly monitoring
