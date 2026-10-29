@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "include-component-in-tag": false,
+  "bootstrap-sha": "a3089426c5a9da32ee74a1d513f5ac1720b5b090",
+  "packages": {
+    ".": {
+      "release-type": "php",
+      "changelog-path": "CHANGELOG.md",
+      "bump-minor-pre-major": true,
+      "extra-files": ["src/Version.php"]
+    }
+  }
+}
