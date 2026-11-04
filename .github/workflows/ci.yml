@@ -1,4 +1,4 @@
-# Same checks as .gitlab-ci.yml (phpunit).
+# CI checks (phpunit).
 name: CI
 
 on:

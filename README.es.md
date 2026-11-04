@@ -120,7 +120,7 @@ Ejemplos: [examples/](./examples/). Referencia API:
 | [pathly-sdk-go](https://github.com/pathlyhq/pathly-sdk-go) | Go |
 | [pathly-sdk-typescript](https://github.com/pathlyhq/pathly-sdk-typescript) | `@pathlyhq/sdk` |
 | [pathly-sdk-python](https://github.com/pathlyhq/pathly-sdk-python) | `pathly` |
-| [pathly-terraform-provider](https://github.com/pathlyhq/pathly-terraform-provider) | Terraform |
+| [terraform-provider-pathly](https://github.com/Pathlyhq/terraform-provider-pathly) | Terraform |
 | [Pathly](https://pathlyhq.com) | Producto [Pathly monitoring](https://pathlyhq.com) |
 
 ## Acerca de Pathly
